@@ -1,0 +1,51 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WaveTune Signup</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"></link>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-[#121212] text-[#BDC3C7] flex flex-col items-center justify-center min-h-screen">
+    <header class="w-full text-center py-4">
+        <h1 class="text-4xl font-bold text-[#3498DB]">WaveTune</h1>
+    </header>
+    <main class="w-full max-w-md mx-auto p-6 bg-[#1E1E2C] rounded-lg shadow-lg">
+        <h2 class="text-3xl font-bold text-center text-[#8E44AD] mb-6">Create Your Account!</h2>
+        <form class="space-y-4" method="post" action="/signup">
+            <div>
+                <label for="username" class="sr-only">Name</label>
+                <input type="text" id="username" name="username" placeholder="Enter your name" class="w-full p-3 bg-transparent border border-[#3498DB] rounded focus:outline-none focus:ring-2 focus:ring-[#3498DB] placeholder-[#BDC3C7]">
+            </div>
+            <div>
+                <label for="email" class="sr-only">Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email address" class="w-full p-3 bg-transparent border border-[#3498DB] rounded focus:outline-none focus:ring-2 focus:ring-[#3498DB] placeholder-[#BDC3C7]">
+            </div>
+            <div>
+                <label for="password" class="sr-only">Password</label>
+                <input type="password" id="password" name="password" placeholder="Create a password" class="w-full p-3 bg-transparent border border-[#3498DB] rounded focus:outline-none focus:ring-2 focus:ring-[#3498DB] placeholder-[#BDC3C7]">
+            </div>
+            <div class="flex items-center">
+                <input type="checkbox" id="terms" class="mr-2">
+                <label for="terms" class="text-sm">I agree to the <a href="#" class="text-[#3498DB]">Terms and Conditions</a></label>
+            </div>
+            <div>
+                <button type="submit" class="w-full p-3 bg-[#8E44AD] text-[#BDC3C7] font-bold rounded hover:bg-[#732d91] focus:outline-none focus:ring-2 focus:ring-[#8E44AD]">Sign Up</button>
+            </div>
+            <div class="text-center">
+                <a href="/login" class="w-full p-3 inline-block bg-[#3498DB] text-[#BDC3C7] font-bold rounded hover:bg-[#2980b9] focus:outline-none focus:ring-2 focus:ring-[#3498DB]">Login</a>
+            </div>
+        </form>
+    </main>
+    <footer class="w-full text-center py-4 mt-6">
+        <p class="text-sm">
+            <a href="#" class="text-[#BDC3C7] hover:text-[#3498DB]">Privacy Policy</a> | 
+            <a href="#" class="text-[#BDC3C7] hover:text-[#3498DB]">Terms of Service</a>
+        </p>
+    </footer>
+</body>

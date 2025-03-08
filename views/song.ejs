@@ -1,0 +1,186 @@
+
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   WaveTune
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: 'Montserrat', sans-serif;
+        }
+    /* Apply dark background to the audio player */
+    audio {
+        background-color: #333; /* Dark background */
+        color: white; /* Text color for the default text elements, if any */
+    }
+
+    /* Styling for the progress bar */
+    audio::-webkit-media-controls-panel {
+        background-color: #333; /* Dark panel background */
+        color: white;
+    }
+
+    audio::-webkit-media-controls-play-button {
+        background-color: #8E44AD; /* Darker button background */
+    }
+
+    audio::-webkit-media-controls-volume-slider {
+        background-color: #555; /* Darker volume slider */
+    }
+
+    audio::-webkit-media-controls-mute-button {
+        background-color: #444; /* Mute button */
+    }
+
+    audio::-webkit-media-controls-current-time-display,
+    audio::-webkit-media-controls-time-remaining-display {
+        color: white; /* White text for time display */
+    }
+
+    audio::-webkit-media-controls-volume-group {
+        background-color: #444; /* Darker volume control area */
+    }
+
+    /* Styling for Firefox */
+    audio::-moz-media-controls {
+        background-color: #333;
+    }
+
+    /* General styling for all browsers that support custom media controls */
+    audio {
+        filter: brightness(0.8); /* Optionally adjust brightness */
+    }
+
+  </style>
+ </head>
+ <body class="bg-[#121212] text-[#BDC3C7]">
+  <header class="flex justify-between items-center p-4 bg-[#1E1E2C]">
+   <div class="text-[#3498DB] text-2xl font-bold">
+    WaveTune
+   </div>
+   <nav class="space-x-4">
+    <a class="hover:text-[#3498DB]" href="/index">
+     Home
+    </a>
+    <a class="hover:text-[#3498DB]" href="#">
+     Library
+    </a>
+    <a class="hover:text-[#3498DB]" href="/logout">
+     Logout
+    </a>
+   </nav>
+  </header>
+  <main class="p-4">
+    <div class="flex flex-col md:flex-row items-center md:items-start space-y-4 md:space-y-0 md:space-x-8">
+        <div class="flex-shrink-0">
+            <img alt="Album cover art with abstract design in vibrant colors" class="w-48 h-48 rounded-full" height="300" src="<%= list.coverImage %>" width="300"/>
+        </div>
+        <div class="flex flex-col space-y-2">
+            <h1 class="text-3xl font-bold text-[#8E44AD]">
+                <%= list.title %>
+            </h1>
+            <h2 class="text-xl text-[#3498DB]">
+                <%= list.artist  %>
+            </h2>
+        </div>
+    </div>
+    
+    <!-- Audio Player -->
+    <div class="mt-8">
+        <audio id="audioPlayer" class="w-full" src="<%= list.filePath %>" controls>
+            Your browser does not support the audio element.
+        </audio>
+    
+    </div>
+    <div class="mt-4 flex items-center space-x-4">
+     <button class="text-[#3498DB] hover:text-[#8E44AD]">
+      <i class="fas fa-plus">
+      </i>
+      Add to Playlist
+     </button>
+     <button class="text-[#3498DB] hover:text-[#8E44AD]">
+      <i class="fas fa-heart">
+      </i>
+      Favorite
+     </button>
+     <button class="text-[#8E44AD] hover:text-[#3498DB]">
+      <i class="fas fa-random">
+      </i>
+      Shuffle
+     </button>
+    </div>
+   </div>
+   <div class="mt-8">
+    <h3 class="text-xl font-bold">
+     Up Next
+    </h3>
+    <ul class="mt-4 space-y-2">
+     <li class="flex items-center space-x-4 hover:bg-[#3498DB] p-2 rounded-lg">
+      <img alt="Thumbnail of the next song's album cover" class="w-12 h-12 rounded" height="50" src="https://storage.googleapis.com/a1aa/image/20DSFbex4uW4Pieq3Jaedhtl7Cu7QAVHa3pNFqGLMTxvP9fPB.jpg" width="50"/>
+      <div>
+       <p class="text-lg">
+        Let Her Go
+       </p>
+       <p class="text-sm">
+        Passenger
+       </p>
+      </div>
+     </li>
+     <li class="flex items-center space-x-4 hover:bg-[#3498DB] p-2 rounded-lg">
+      <img alt="Thumbnail of the next song's album cover" class="w-12 h-12 rounded" height="50" src="https://storage.googleapis.com/a1aa/image/20DSFbex4uW4Pieq3Jaedhtl7Cu7QAVHa3pNFqGLMTxvP9fPB.jpg" width="50"/>
+      <div>
+       <p class="text-lg">
+        Forever Young
+       </p>
+       <p class="text-sm">
+        Alphaville
+       </p>
+      </div>
+     </li>
+     <li class="flex items-center space-x-4 hover:bg-[#3498DB] p-2 rounded-lg">
+      <img alt="Thumbnail of the next song's album cover" class="w-12 h-12 rounded" height="50" src="https://storage.googleapis.com/a1aa/image/20DSFbex4uW4Pieq3Jaedhtl7Cu7QAVHa3pNFqGLMTxvP9fPB.jpg" width="50"/>
+      <div>
+       <p class="text-lg">
+        All by Myself
+       </p>
+       <p class="text-sm">
+        Celine Dion
+       </p>
+      </div>
+     </li>
+    </ul>
+   </div>
+  </main>
+  <footer class="mt-8 p-4 bg-[#1E1E2C]">
+   <div class="flex justify-between items-center">
+    <div class="space-x-4">
+     <a class="hover:text-[#3498DB]" href="#">
+      Privacy Policy
+     </a>
+     <a class="hover:text-[#3498DB]" href="#">
+      Terms of Service
+     </a>
+    </div>
+    <div class="space-x-4">
+     <a class="hover:text-[#3498DB]" href="#">
+      <i class="fab fa-facebook-f">
+      </i>
+     </a>
+     <a class="hover:text-[#3498DB]" href="#">
+      <i class="fab fa-twitter">
+      </i>
+     </a>
+     <a class="hover:text-[#3498DB]" href="#">
+      <i class="fab fa-instagram">
+      </i>
+     </a>
+    </div>
+   </div>
+  </footer>
+ </body>
+
