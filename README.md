@@ -8,7 +8,7 @@ A stylish and lightweight music player built with **HTML**, **CSS**, and **JavaS
 
 > Add your screenshots in a `screenshots/` folder and update the links below.
 
-![Homepage](screenshots/homepage.png)
+![Homepage](screenshots/homePage.png)
 *Clean homepage with intuitive player layout*
 
 ![Player Active](screenshots/player-active.png)
