@@ -6,13 +6,29 @@ A stylish and lightweight music player built with **HTML**, **CSS**, and **JavaS
 
 ## 📸 Screenshots
 
-> Add your screenshots in a `screenshots/` folder and update the links below.
+> These screenshots are from the latest release. You can find them [here](https://github.com/tanmayyysachan/Sonique/releases).
 
-![Homepage](screenshots/homePage.png)
-*Clean homepage with intuitive player layout*
+![Home Page](https://github.com/your-username/Sonique/releases/download/v1.0.0/HomePage.png)
+*Homepage showcasing trending tracks and genres*
 
-![Player Active](screenshots/player-active.png)
-*Music playing with active progress bar and controls*
+![Signup Page](https://github.com/your-username/Sonique/releases/download/v1.0.0/SignupPage.png)
+*Signup page for new users*
+
+![Login Page](https://github.com/your-username/Sonique/releases/download/v1.0.0/LoginPage.png)
+*Login page with user authentication UI*
+
+![Main Page](https://github.com/your-username/Sonique/releases/download/v1.0.0/MainPage.png)
+*Main music player interface*
+
+![Song Page](https://github.com/your-username/Sonique/releases/download/v1.0.0/SongPage.png)
+*Detailed song view with lyrics and controls*
+
+![Subscription Page 1](https://github.com/your-username/Sonique/releases/download/v1.0.0/SubscriptionPage1.png)
+*Subscription plans overview*
+
+![Subscription Page 2](https://github.com/your-username/Sonique/releases/download/v1.0.0/SubscriptionPage2.png)
+*Payment confirmation and plan details*
+
 
 ---
 
