@@ -66,7 +66,6 @@ Sonique is a stylish and lightweight music player built with **EJS** and **JavaS
 
 ## 📬 Contact
 
-Created by [Tanmay Sachan]
 📧 Email: tanmaysachan0005@gmail.com  
 🌐 GitHub: [@tanmayyysachan](https://github.com/tanmayyysachan)
 
